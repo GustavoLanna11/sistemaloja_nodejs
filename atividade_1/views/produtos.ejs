@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+
+    <table border="1">
+        <tr>
+            <th width="100px"> Nome: </th>
+            <th> CPF: </th>
+            <th> Endereço: </th>
+        </tr>
+        <tr>
+            <% produtos.forEach ((produto) => { %>
+                <td><%= produto.nome %></td>
+                <td><%= produto.cpf %></td>
+                <td><%= produto.endereco %></td>
+        </tr>
+        <%  }) %>
+    </table>
+</body>
+</html>
