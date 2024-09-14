@@ -1,0 +1,44 @@
+#inicio{
+    background-image: url('/imgs/bg.jpg');
+    width: 100%;
+    height: 850px
+}
+
+/*Home*/
+#informacoes{
+    margin-left: 25%;
+    padding-top: 250px;
+    color: white
+}
+
+#title{
+    font-size: 35px
+}
+
+#subtitle{
+    font-size: 60px
+}
+
+#txt{
+    font-size: 20px
+}
+/*Home*/
+
+#navbar{
+    background-color:#000000;
+    height: 100px;
+    gap: 370px
+}
+
+#item{
+    color: white;
+    font-size: 20px;
+    font-weight:300;
+}
+
+#item:hover{
+    transform: scale(0.9);
+    background-color: gray;
+    color: #000000;
+    border-radius: 20px;
+}
