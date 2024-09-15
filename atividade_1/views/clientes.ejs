@@ -1,11 +1,11 @@
 <%- include ('partials/navbar.ejs') %>
-<%- include ('partials/header.ejs') %>
 
-    <h1>Clientes</h1>
+    <p id="titleClientes">INFORMAÇÕES DOS CLIENTES:</p>
+    <div id="firulaClientes"></div>
 
-    <table border="1">
+    <table class="table table-striped table-hover" id="tabela" border="1">
         <tr>
-            <th width="100px"> Nome: </th>
+            <th> Nome: </th>
             <th> CPF: </th>
             <th> Endereço: </th>
         </tr>
@@ -17,6 +17,5 @@
         </tr>
         <%  }) %>
     </table>
-
 
 <%- include ('partials/footer.ejs') %>
