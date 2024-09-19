@@ -1,1 +1,0 @@
-window.alert('Seja bem-vindo a loja BOTLAB!');
