@@ -54,7 +54,8 @@ app.get("/pedidos", (req,res) => {
         {numeroPed: '4', valor: '800', cliente:'João', itens: '2x Mouspad, 2x teclado'},
         {numeroPed: '5', valor: '3000', cliente:'Ana', itens: '1x Notebook'},
         {numeroPed: '6', valor: '2000', cliente:'Yasmin', itens: '1x Placa mãe'},
-        {numeroPed: '7', valor: '600', cliente:'Isabely', itens: '2x Teclado'}];
+        {numeroPed: '7', valor: '600', cliente:'Isabely', itens: '2x Teclado'},
+        {numeroPed: '8', valor: '600', cliente:'Gustavo', itens: '2x Teclado'}];
         res.render("pedidos", {
             pedidos:pedidos
         })
