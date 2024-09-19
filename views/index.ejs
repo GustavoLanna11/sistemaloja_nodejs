@@ -1,0 +1,82 @@
+<%- include ('partials/navbar.ejs') %>
+
+<div id="inicio">
+    <div id="informacoes">
+        <h4 id="title">BEM VINDO AO</h4>
+        <h1 id="subtitle"><b>BOTLAB!</b></h1>
+        <p id="txt">Explore os nossos produtos de <br> alta qualidade e nossas 
+        promoções <br> feitas especialmente 
+         para você!</p>
+    </div>
+</div>
+
+<p id="txtProd">CONFIRA ALGUNS DE NOSSOS PRODUTOS:</p>
+<div id="firula"></div>
+
+<div id="cards">
+    <div class="card" style="width: 18rem;" id="card">
+        <img src="/imgs/pc.jfif" class="card-img-top" alt="..." height="200">
+        <div class="card-body">
+          <h5 class="card-title">PC Gamer - 2500 R$</h5>
+          <p class="card-text">É um computador totalmente otimizada para rodas jogos eletrônicos com alta performance. Quando pensamos em PCs, muitas vezes imaginamos as tarefas padrão: navegação na web, edição de documentos e streaming de vídeos. </p>
+          <a href="produtos" class="btn btn" id="botaoProd">Ver todos os produtos</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="card">
+        <img src="/imgs/teclado.jfif" class="card-img-top" alt="..." height="200">
+        <div class="card-body">
+          <h5 class="card-title">Teclado Mecânico - 300 R$</h5>
+          <p class="card-text">Se você busca por mais agilidade e ótima precisão em suas jogadas, os teclados gamer são uma boa pedida. Cheios de estilo e com iluminação RGB, muitos modelos já vêm até com as teclas específicas para jogos destacadas em cores diferentes. </p>
+          <a href="produtos" class="btn btn" id="botaoProd">Ver todos os produtos</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="card">
+        <img src="/imgs/mouse.webp" class="card-img-top" alt="..." height="200">
+        <div class="card-body">
+          <h5 class="card-title">Mouse Gamer - 100 R$</h5>
+          <p class="card-text">Mouse gamer, para oferecer mais leveza e agilidade. Quanto mais baixo o tempo de resposta, melhor. Isso significa que o mouse responde aos comandos (rastreio e acionamento dos botões) mais rápido, sendo essencial em jogos competitivos.
+          </p>
+          <a href="produtos" class="btn btn" id="botaoProd">Ver todos os produtos</a>
+        </div>
+      </div>
+</div>
+
+<div id="rec">
+  <p id="txtRec">QUEM COMPROU CONOSCO RECOMENDA!</p>
+  <div id="firula2"></div><br>
+
+  <div id="recomendacoes">
+    <div class="card" style="width: 18rem;" id="card">
+      <div class="card-body">
+        <h5 class="card-title">Gustavo</h5>
+        <p class="card-text">Excelente qualidade dos produtos e velocidade de entrega!</p>
+      </div>
+      <hr>
+      <img src="/imgs/stars.webp" class="card-img-top" alt="..." id="star">
+      <br>
+    </div>
+  
+    <div class="card" style="width: 18rem;" id="card">
+      <div class="card-body">
+        <h5 class="card-title">Isabele</h5>
+        <p class="card-text">Loja perfeita! Estou indo para a minha 10 compra já rs, recomendo!</p>
+      </div>
+      <hr>
+      <img src="/imgs/stars.webp" class="card-img-top" alt="..." id="star">
+      <br>
+    </div>
+  
+    <div class="card" style="width: 18rem;" id="card">
+      <div class="card-body">
+        <h5 class="card-title">Thiago</h5>
+        <p class="card-text">A previsão era de 10 e chegou em 2 dias, excelente!</p>
+      </div>
+      <hr>
+      <img src="/imgs/stars.webp" class="card-img-top" alt="..." id="star">
+      <br>
+    </div>
+  </div>
+  <br><br>
+</div>
+<script src="/js/script.js"></script>
+<%- include ('partials/footer.ejs') %>

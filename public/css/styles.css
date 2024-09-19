@@ -1,0 +1,186 @@
+#inicio{
+    background-image: url('/imgs/bg.jpg');
+    width: 100%;
+    height: 850px
+}
+
+/*Home*/
+#informacoes{
+    margin-left:15%;
+    padding-top: 250px;
+    color: white
+}
+
+#title{
+    font-size: 35px
+}
+
+#subtitle{
+    font-size: 60px
+}
+
+#txt{
+    font-size: 20px
+}
+/*Home*/
+
+#navbar{
+    background-color:#000000;
+    height: 100px;    
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#navbarNav{
+    margin-left: 200px;
+    
+}
+
+#item{
+    color: white;
+    font-size: 20px;
+    font-weight:300;
+}
+
+#item:hover{
+    transform: scale(0.9);
+    background-color: gray;
+    color: #000000;
+    border-radius: 20px;
+}
+
+
+#txtProd{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+    font-weight: 700;
+}
+
+#txtRec{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+    font-weight: 700;
+    color: white;
+}
+
+#firula{
+    background-color: red;
+    border-radius: 10px;
+    width: 600px;
+    height: 6px;
+
+    margin: 0 auto;
+}
+
+#firula2{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 600px;
+    height: 6px;
+
+    margin: 0 auto;
+}
+
+#firulaProd{
+    background-color: red;
+    border-radius: 10px;
+    width: 300px;
+    height: 6px;
+
+    margin: 0 auto;
+}
+
+#firulaPed{
+    background-color: red;
+    border-radius: 10px;
+    width: 150px;
+    height: 6px;
+
+    margin: 0 auto;
+}
+
+
+#firulaClientes{
+    background-color: red;
+    border-radius: 10px;
+    width: 450px;
+    height: 6px;
+
+    margin: 0 auto;
+}
+
+#star{
+    width: 200px;
+    margin-left: 40px
+}
+
+#rec{
+    background: rgb(222,50,50);
+background: linear-gradient(90deg, rgb(210, 32, 32) 0%, rgb(129, 107, 107) 100%);
+}
+
+#recomendacoes{
+    padding-top: 50px;
+    gap: 60px;
+    padding-bottom: 50px;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+#icons{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+
+    gap: 30px
+}
+
+#cards{
+    padding-top: 50px;
+    gap: 60px;
+    padding-bottom: 50px;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+#card:hover{
+    transform: scale(0.96);
+}
+
+#botaoProd{
+    background-color: red;
+    color: white;
+    margin-left: 12%;
+    border-radius: 20px;
+}
+
+#botaoProd:hover{
+    background-color: rgb(180, 127, 127);
+    color: white;
+    transform: scale(0.9);
+}
+
+#titleClientes{
+    padding-top: 200px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+#tabela{
+    width: 94%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#color{
+    background-color: tomato;
+}

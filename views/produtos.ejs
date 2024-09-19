@@ -1,0 +1,22 @@
+<%- include ('partials/navbar.ejs') %>
+<p id="titleClientes">Nossos produtos:</p>
+<div id="firulaProd"></div>
+    <table class="table table-striped table-hover" border="1" id="tabela">
+        <tr>
+            <th> Nome: </th>
+            <th> Preço: </th>
+            <th> Marca: </th>
+            <th> Categoria: </th>
+            <th> Descrição: </th>
+        </tr>
+        <tr>
+            <% produtos.forEach ((produto) => { %>
+                <td><%= produto.nome %></td>
+                <td><%= produto.preco %></td>
+                <td><%= produto.marca %></td>
+                <td><%= produto.categoria %></td>
+                <td><%= produto.descricao %></td>
+        </tr>
+        <%  }) %>
+    </table>
+<%- include ('partials/footer.ejs') %>
