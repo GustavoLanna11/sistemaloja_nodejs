@@ -1,18 +1,38 @@
-const express = require("express");
+import express from 'express'
 const app = express();
+import connection from './config/sequelize-config.js'
+import ClientesController from "./controllers/ClientesController.js"
+
+//Permitir capturar dados vindo de formulários
+app.use(express.urlencoded({extended: false}))
+
+//realizando a conexão com o banco de dados
+connection.authenticate().then(() => {
+    console.log("Conexão com o banco de dados feita com sucesso!");
+}).catch((error) => {
+    console.log(error)
+});
+
+//criando o banco de dados se ele não existir
+connection.query(`CREATE DATABASE IF NOT EXISTS loja_gusta;`).then(() => {
+    console.log("O banco de dados está criado.");
+}).catch((error) => {
+    console.log(error)
+})
 
 //renderizador de páginas
 app.set("view engine", "ejs");
+app.use(express.static('public'))
+
+app.use("/", ClientesController)
 
 //Rota principal
 app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.use(express.static('public'))
-
 //rota de clientes
-app.get("/clientes", (req, res) => {
+/*app.get("/clientes", (req, res) => {
     const clientes =[
         {nome: 'Gustavo', cpf: '123.456.789-11', endereco: 'Rua Pitanga'},
         {nome: 'Isabele', cpf:'777.444.333-12', endereco:'Rua Vila Antunes'},
@@ -28,7 +48,7 @@ app.get("/clientes", (req, res) => {
         clientes: clientes
      })
 })
-
+*/
 //rota de produtos
 app.get("/produtos", (req,res) => {
     const produtos = [

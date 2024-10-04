@@ -1,6 +1,71 @@
 <%- include ('partials/navbar.ejs') %>
 
-    <p id="titleClientes">INFORMAÇÕES DOS CLIENTES:</p>
+<br><br><br><br><br>
+
+<div class="conteiner ps-5 pe-5">
+    <div class="card ">
+        <div class="card-header">
+            <h1>Cadastrar Cliente</h1>
+        </div>
+        <div class="card-body">
+            <form action="/clientes/new" method="POST">
+                <label>Nome do cliente: </label>
+                <input type="text" name="nome" id="nome" placeholder="Insira o Nome do Cliente" class="form-control" required>
+
+                <label>CPF: </label>
+                <input type="text" name="cpf" id="cpf" placeholder="Insira o cpf do Cliente" class="form-control" required>
+
+                <label>Endereço: </label>
+                <input type="text" name="endereco" id="endereco" placeholder="Insira o endereço do Cliente" class="form-control" required>
+                <br>
+            <input type="submit" value="Cadastrar" class="btn btn-success">
+            </form>
+            
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Clientes</h1>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nome:</th>
+                        <th>CPF:</th>
+                        <th>Endereço:</th>
+                        <th colspan="2">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% clientes.forEach(cliente=> { %>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <%= cliente.nome %>
+                            </td>
+                            <td>
+                                <%= cliente.cpf %>
+                            </td>
+                            <td>
+                                <%= cliente.endereco %>
+                            </td>
+                            <td><a style="color: orange;" href="/clientes/edit/<%=cliente.id %>">Edtiar</a></td>
+                            <td><a style="color: red;" href="/clientes/delete/<%=cliente.id %>" onclick="return confirm ('Deseja realmente deletar o Cliente <%= cliente.nome%>?')">Deletar</a></td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br><br>
+    <!-- <p id="titleClientes">INFORMAÇÕES DOS CLIENTES:</p> 
     <div id="firulaClientes"></div>
 
     <table class="table table-striped table-hover" id="tabela" border="1">
@@ -16,6 +81,6 @@
                 <td><%= cliente.endereco %></td>
         </tr>
         <%  }) %>
-    </table>
+    </table>-->
 
 <%- include ('partials/footer.ejs') %>
