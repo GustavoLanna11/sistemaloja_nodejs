@@ -3,6 +3,21 @@ const app = express();
 import connection from './config/sequelize-config.js'
 import ClientesController from "./controllers/ClientesController.js"
 
+import UsersController from "./controllers/UsersControllers.js"
+import session from "express-session"
+
+import Auth from "./middleware/Auth.js"
+import flash from "express-flash"
+
+app.use(session({
+    secret: "bootlab",
+    cookie: {maxAge:3600000},//sessão expira em uma hora
+    saveUninitialized: false,
+    resave: false
+}))
+
+app.use(flash())
+
 //Permitir capturar dados vindo de formulários
 app.use(express.urlencoded({extended: false}))
 
@@ -25,30 +40,15 @@ app.set("view engine", "ejs");
 app.use(express.static('public'))
 
 app.use("/", ClientesController)
+app.use("/", UsersController)
 
 //Rota principal
-app.get("/", (req, res) => {
-    res.render("index");
+app.get("/", Auth, (req, res) => {
+    res.render("index", {
+        messages: req.flash()
+    });
 });
 
-//rota de clientes
-/*app.get("/clientes", (req, res) => {
-    const clientes =[
-        {nome: 'Gustavo', cpf: '123.456.789-11', endereco: 'Rua Pitanga'},
-        {nome: 'Isabele', cpf:'777.444.333-12', endereco:'Rua Vila Antunes'},
-        {nome: 'Yasmin', cpf: '123.456.789-13', endereco: 'Rua Barra'},
-        {nome: 'Ana', cpf: '123.456.789-14', endereco: 'Rua Valo Grande'},
-        {nome: 'Isabely', cpf: '123.456.789-15', endereco: 'Rua Pitanga'},
-        {nome: 'Thiago', cpf:'123.987.655-16', endereco:'Rua do grau'},
-        {nome: 'João', cpf:'999.777.656-17', endereco:'Rua Pirajá'},
-        {nome: 'Clayton', cpf:'888.999.000-18', endereco:'Rua Tupiniquim'},
-        {nome: 'Maria', cpf:'988.779.110-19', endereco:'Rua Matilda'},
-        {nome: 'Julia', cpf:'688.799.190-20', endereco:'Rua Das Flores'}];
-     res.render("clientes", {
-        clientes: clientes
-     })
-})
-*/
 //rota de produtos
 app.get("/produtos", (req,res) => {
     const produtos = [

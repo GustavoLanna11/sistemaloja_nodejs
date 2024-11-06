@@ -1,5 +1,11 @@
 <%- include ('partials/navbar.ejs') %>
 
+<% if (messages.success) { %>
+  <div class="alert alert-success flash">
+      <%= messages.success %>
+  </div>
+<% } %>
+
 <div id="inicio">
     <div id="informacoes">
         <h4 id="title">BEM VINDO AO</h4>

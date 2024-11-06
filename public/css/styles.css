@@ -186,3 +186,8 @@ background: linear-gradient(90deg, rgb(210, 32, 32) 0%, rgb(129, 107, 107) 100%)
 #color{
     background-color: tomato;
 }
+
+.flash{
+    z-index: 999;
+
+}
