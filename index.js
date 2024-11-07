@@ -50,7 +50,7 @@ app.get("/", Auth, (req, res) => {
 });
 
 //rota de produtos
-app.get("/produtos", (req,res) => {
+app.get("/produtos", Auth, (req,res) => {
     const produtos = [
         {nome: 'Teclado Mecânico', preco: '300', categoria: 'Periféricos', descricao: 'Teclado voltado a players de alto nível.', marca:'Redragon'},
         {nome: 'Mouse', preco: '200', categoria: 'Periféricos', descricao:'Mouse de 3600 DPI, voltado a games de FPS.', marca:'Redragon'},
@@ -66,7 +66,7 @@ app.get("/produtos", (req,res) => {
 })
 
 //rota de pedidos
-app.get("/pedidos", (req,res) => {
+app.get("/pedidos", Auth, (req,res) => {
     const pedidos = [
         {numeroPed: '1', valor: '400', cliente:'Gustavo', itens: '1x Mouspad, 1x teclado'},
         {numeroPed: '2', valor: '300', cliente:'Isabele', itens: '1x teclado'},
